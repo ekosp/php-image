@@ -30,10 +30,10 @@ if ($result->num_rows > 0) {
 					<td>".$row["id"]."</td>
 					<td>".$row["nama"]."</td>
 					<!-- <td><a href='".$row["image"]."'>" . "Cetak" . "</a></td>  -->
-					<td><a href='http://localhost/php-image/test.php?varname=".$row["nama"]."
+					<td><a href='http://localhost/php-image/generate_id_card.php?varname=".$row["nama"]."
 					&varkerjaan=".$row["kerjaan"]."
 					&varimage=".$row["image"]."
-					&varstatus=".$row["status"]."'>" . "Cetak" . "</a></td>
+					&varstatus=".$row["status"]."' target=\"_blank\">" . "Cetak" . "</a></td>
 					
 				</tr>";
     }

@@ -27,8 +27,6 @@ $var_image = $_GET['varimage'];
 		
 		
 		imagecopy($im, $im2, 65, 110, 0, 0, imagesx($im2), imagesy($im2));
-		
-
 
 		header("Content-type: image/jpeg");
     $imgPath = 'test4.jpg';
@@ -39,32 +37,28 @@ $var_image = $_GET['varimage'];
 	if (!empty($var_nama)) {
 		$string = $var_nama;
 	}
-
-$string2 = "dummy_kerjaan";
-if (!empty($var_kerjaan)) {
-    $string = $var_kerjaan;
-}
-
-$string3 = "dummy_status";
-if (!empty($var_status)) {
-    $string = $var_status;
-}
     $fontSize = 5;
 	$x = 415;
     $y = 185;
     imagestring($image, $fontSize, $x, $y, $string, $color);
-    
-	$string = "Android Developer, Technical Consultant";
+
+    $string2 = "dummy_kerjaan";
+    if (!empty($var_kerjaan)) {
+        $string2 = $var_kerjaan;
+    }
     $fontSize = 5;
 	$x = 415;
     $y = 285;
-    imagestring($image, $fontSize, $x, $y, $string, $color);	
-	
-	$string = "Tangerang, Banten, Indonesia";
+    imagestring($image, $fontSize, $x, $y, $string2, $color);
+
+	$string3 = "dummy_status";
+    if (!empty($var_status)) {
+        $string3 = $var_status;
+    }
     $fontSize = 5;
 	$x = 415;
     $y = 385;
-    imagestring($image, $fontSize, $x, $y, $string, $color);
+    imagestring($image, $fontSize, $x, $y, $string3, $color);
 	
 	
 	// show image on browser
