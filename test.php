@@ -8,8 +8,11 @@ ini_set('display_errors', 1);
 $var_nama = $_GET['varname'];
 $var_kerjaan = $_GET['varkerjaan'];
 $var_status = $_GET['varstatus'];
+$var_image = $_GET['varimage'];
 
-		$photo_to_paste="ekosp250x333.jpg";  //image 321 x 400
+
+		//$photo_to_paste="ekosp250x333.jpg";  //image 321 x 400
+        $photo_to_paste=$var_image;
  	   $white_image="card-template2.jpg"; //873 x 622 
 
         $im = imagecreatefromjpeg($white_image);
@@ -34,7 +37,7 @@ $var_status = $_GET['varstatus'];
     
 	$string = "dummy_name";
 	if (!empty($var_nama)) {
-		$string = $var_kerjaan;
+		$string = $var_nama;
 	}
 
 $string2 = "dummy_kerjaan";

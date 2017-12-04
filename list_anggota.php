@@ -9,17 +9,9 @@ table, th, td {
 </head>
 <body>
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "pendataan_anggota";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+
+include('dbconnect.php');
 
 $sql = "SELECT id, nama, kerjaan, status, image FROM detail_anggota";
 $result = $conn->query($sql);
@@ -40,6 +32,7 @@ if ($result->num_rows > 0) {
 					<!-- <td><a href='".$row["image"]."'>" . "Cetak" . "</a></td>  -->
 					<td><a href='http://localhost/php-image/test.php?varname=".$row["nama"]."
 					&varkerjaan=".$row["kerjaan"]."
+					&varimage=".$row["image"]."
 					&varstatus=".$row["status"]."'>" . "Cetak" . "</a></td>
 					
 				</tr>";
