@@ -5,7 +5,9 @@ ini_set('display_errors', 1);
 
 
 //get name
-$var_value = $_GET['varname'];
+$var_nama = $_GET['varname'];
+$var_kerjaan = $_GET['varkerjaan'];
+$var_status = $_GET['varstatus'];
 
 		$photo_to_paste="ekosp250x333.jpg";  //image 321 x 400
  	   $white_image="card-template2.jpg"; //873 x 622 
@@ -30,10 +32,20 @@ $var_value = $_GET['varname'];
     $image = $im;
 	$color = imagecolorallocate($image, 0, 0, 0);
     
-	$string = "dummy name";
-	if (!empty($var_value)) {
-		$string = $var_value;
+	$string = "dummy_name";
+	if (!empty($var_nama)) {
+		$string = $var_kerjaan;
 	}
+
+$string2 = "dummy_kerjaan";
+if (!empty($var_kerjaan)) {
+    $string = $var_kerjaan;
+}
+
+$string3 = "dummy_status";
+if (!empty($var_status)) {
+    $string = $var_status;
+}
     $fontSize = 5;
 	$x = 415;
     $y = 185;

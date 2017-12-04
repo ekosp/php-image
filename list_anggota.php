@@ -38,7 +38,9 @@ if ($result->num_rows > 0) {
 					<td>".$row["id"]."</td>
 					<td>".$row["nama"]."</td>
 					<!-- <td><a href='".$row["image"]."'>" . "Cetak" . "</a></td>  -->
-					<td><a href='http://localhost/php-image/test.php?varname=".$row["nama"]."'>" . "Cetak" . "</a></td>
+					<td><a href='http://localhost/php-image/test.php?varname=".$row["nama"]."
+					&varkerjaan=".$row["kerjaan"]."
+					&varstatus=".$row["status"]."'>" . "Cetak" . "</a></td>
 					
 				</tr>";
     }
